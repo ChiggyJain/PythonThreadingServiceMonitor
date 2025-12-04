@@ -1,0 +1,18 @@
+{
+    "github_api": {
+        "total_checks": 3,
+        "success": 3,
+        "failures": 0,
+        "consecutive_failures": 0,
+        "avg_latency_ms": 283.33306312561035,
+        "last_status": "up"
+    },
+    "httpbin_get": {
+        "total_checks": 2,
+        "success": 2,
+        "failures": 0,
+        "consecutive_failures": 0,
+        "avg_latency_ms": 3987.2403144836426,
+        "last_status": "up"
+    }
+}
