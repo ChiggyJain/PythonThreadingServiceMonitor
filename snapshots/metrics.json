@@ -4,15 +4,15 @@
         "success": 3,
         "failures": 0,
         "consecutive_failures": 0,
-        "avg_latency_ms": 408.71389706929523,
+        "avg_latency_ms": 335.72912216186523,
         "last_status": "up"
     },
     "httpbin_get": {
         "total_checks": 2,
-        "success": 2,
-        "failures": 0,
+        "success": 1,
+        "failures": 1,
         "consecutive_failures": 0,
-        "avg_latency_ms": 2552.611470222473,
+        "avg_latency_ms": 1993.0224418640137,
         "last_status": "up"
     }
 }
