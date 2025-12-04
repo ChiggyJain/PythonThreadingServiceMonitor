@@ -1,18 +1,18 @@
 {
     "github_api": {
-        "total_checks": 3,
-        "success": 3,
+        "total_checks": 11,
+        "success": 11,
         "failures": 0,
         "consecutive_failures": 0,
-        "avg_latency_ms": 335.72912216186523,
+        "avg_latency_ms": 1121.3880668986928,
         "last_status": "up"
     },
     "httpbin_get": {
-        "total_checks": 2,
-        "success": 1,
+        "total_checks": 7,
+        "success": 6,
         "failures": 1,
         "consecutive_failures": 0,
-        "avg_latency_ms": 1993.0224418640137,
+        "avg_latency_ms": 2821.6960032780967,
         "last_status": "up"
     }
 }

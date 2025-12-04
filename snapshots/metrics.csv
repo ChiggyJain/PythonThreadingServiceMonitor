@@ -1,3 +1,3 @@
 service,total_checks,success,failures,consecutive_failures,avg_latency_ms,last_status
-github_api,3,3,0,0,335.72912216186523,up
-httpbin_get,2,1,1,0,1993.0224418640137,up
+github_api,11,11,0,0,1121.3880668986928,up
+httpbin_get,7,6,1,0,2821.6960032780967,up
