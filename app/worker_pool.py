@@ -7,7 +7,7 @@ class WorkerPool:
     # constructor
     def __init__(self, task_queue, results_queue=None, num_workers=3):
         self.task_queue = task_queue
-        self.task_queue = results_queue
+        self.results_queue = results_queue
         self.num_workers = num_workers
         self.workers = []
 
