@@ -5,8 +5,9 @@ from .worker_single import SingleWorker
 class WorkerPool:
 
     # constructor
-    def __init__(self, task_queue, num_workers=3):
+    def __init__(self, task_queue, results_queue=None, num_workers=3):
         self.task_queue = task_queue
+        self.task_queue = results_queue
         self.num_workers = num_workers
         self.workers = []
 
@@ -17,6 +18,7 @@ class WorkerPool:
             # activating each worker with respective task details
             worker = SingleWorker(
                 task_queue=self.task_queue,
+                results_queue=self.results_queue,
                 name=f"Worker-{i+1}"
             )
             worker.start()

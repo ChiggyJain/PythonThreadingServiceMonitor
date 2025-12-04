@@ -9,10 +9,11 @@ from .models import CheckResult
 
 class SingleWorker(StoppableThread):
     
-    def __init__(self, task_queue, name="Worker1", daemon=True):
+    def __init__(self, task_queue, results_queue=None, name="Worker1", daemon=True):
         # calling parent class constructor
         super().__init__(name=name, daemon=daemon)
         self.task_queue = task_queue
+        self.results_queue = results_queue
 
     # this function will be automatically run when any respective thread-start
     # this is inbuilt function of threading.Thread class and in child is overwride as per requirement
@@ -31,6 +32,7 @@ class SingleWorker(StoppableThread):
                 break
             # fetching the http-service response details like checking health-status and other details
             result = self.perform_health_check(service)
+            self.results_queue.put(result)
             # Print result (later we push to result-queue)
             if result.error:
                 logging.error(

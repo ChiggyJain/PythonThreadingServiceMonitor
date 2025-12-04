@@ -11,10 +11,11 @@ def run_phase3():
     logging.info("==== PHASE 3: MULTI WORKER POOL ====")
     # python inbuilt queue-data-structure is initialized to use in thread
     task_queue = queue.Queue()
+    results_queue = queue.Queue()
     # Load services
     services = load_services_config()
     # Create worker pool instances with given details and worker-pool is start worker-work as per given worker-numbers
-    pool = WorkerPool(task_queue=task_queue, num_workers=3)
+    pool = WorkerPool(task_queue=task_queue, results_queue=results_queue, num_workers=3)
     pool.start()
     # Push each tasks into queue
     for svc in services:
