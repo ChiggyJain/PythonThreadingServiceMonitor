@@ -40,6 +40,7 @@ class SingleWorker(StoppableThread):
                 logging.info(
                     f"[{service.name}] ✅ {result.status_code} "
                     f"Latency: {result.response_time_ms:.2f} ms"
+                    f"Worker-Instances: {self.name}"
                 )
             self.task_queue.task_done()
         logging.info(f"🧵 {self.name} stopped")
