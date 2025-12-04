@@ -1,0 +1,17 @@
+services:
+
+  - name: github_api
+    url: https://api.github.com
+    timeout: 3
+    interval: 10
+    alert_threshold:
+      consecutive_failures: 3
+      max_latency_ms: 800
+
+  - name: httpbin_get
+    url: https://httpbin.org/get
+    timeout: 3
+    interval: 15
+    alert_threshold:
+      consecutive_failures: 3
+      max_latency_ms: 1200
