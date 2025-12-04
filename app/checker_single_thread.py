@@ -32,6 +32,7 @@ def perform_health_check(service):
 
 
 def run_single_thread_checker():
+    # doing setup for inbuilt python logger as info level only
     setup_logging()
     logging.info("🔍 Starting Single-Thread Health Checker")
     # getting all services in list to check health-status and other details
